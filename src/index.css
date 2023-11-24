@@ -1,68 +1,170 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  margin: 0;
+  background-size: cover;
+  background-image: url(../src/assets/images/background.png);
+}
+
+.first_menu {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#logo {
+  width: 25%;
+  padding-right: 20px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.menu {
+  margin-top: 1px;
+  margin-bottom: 5px;
+  color: white;
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#menuitem1 {
+  margin-right: 50px;
+}
+
+#menuitem2 {
+  margin-right: 50px;
+}
+
+#menuitem3 {
+  margin-right: 50px;
+}
+
+#menuitem4 {
+  margin-right: 50px;
+}
+
+.firstbutton {
+  margin-right: 5px;
+  padding: 10px 30px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  background: linear-gradient(100.39deg, #1e78f0 1.81%, #9716ca 100%);
+}
+
+.secondbutton {
+  padding: 10px 30px;
+  border: 1px solid #fefefe;
+  border-radius: 4px;
+  color: white;
+  background: transparent;
+}
+
+.row {
+  display: flex;
+  height: 90%;
+  align-items: center;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  padding-left: 100px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.medcopy {
+  font-size: 40px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  margin-top: 100px;
+}
+
+.secondcopy {
+  color: white;
+  font-family: "Space Mono", monospace;
+}
+
+.imageholder {
+  width: 80%;
+}
+
+.imageholder img {
+  width: 500px;
+}
+
+.aboutsection {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#valuetext {
+  text-align: center;
+  color: white;
+}
+
+.firstline,
+.secondline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstline {
+  margin-top: 35px;
+}
+
+.firstline img {
+  width: 340px;
+}
+
+.secondline {
+  margin-top: 30px;
+}
+
+.secondline img {
+  width: 340px;
+}
+
+.div-button {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.sponsorholder img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.first_menu {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.textholderr {
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 100px;
+}
+
+.abouttext {
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  margin-right: 40px;
+}
+
+.readbut {
+  margin-right: 5px;
+  padding: 10px 40px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  background: linear-gradient(100.39deg, #1e78f0 1.81%, #9716ca 100%);
+}
+
+.docimage img {
+  width: 450px;
 }
