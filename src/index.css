@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.holder {
   background-size: cover;
   background-image: url(../src/assets/images/background.png);
 }
@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 2rem;
 }
 
 #logo {
@@ -167,4 +168,549 @@ body {
 
 .docimage img {
   width: 450px;
+}
+
+/* dashboard overview page style */
+.profile__dash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.parentdiv {
+  display: flex;
+  background: var(--foundation-primary-color-darker, #0b2a54);
+}
+
+.image-dasboard {
+  background: var(--foundation-primary-color-dark-active, #0d366c);
+  flex-basis: 30%;
+}
+.secondcolumn {
+  background: var(--foundation-primary-color-darker, #0b2a54);
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.minimenu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  position: relative;
+}
+.input {
+  width: 500px;
+  height: 40px;
+  position: relative;
+  margin-top: 5%;
+}
+.search-bar {
+  display: flex;
+  align-content: space-between;
+  gap: 20px;
+}
+.img1 {
+  width: 40px;
+  height: 40px;
+}
+.img2 {
+  width: 40px;
+  height: 40px;
+}
+#light {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashbut {
+  border-radius: 0px 40px 40px 0px;
+  background: var(--foundation-violet-normal-active, #7912a2);
+  color: #fffde9;
+  display: flex;
+  width: 300px;
+  height: 60px;
+  margin: 100px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 36px;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+}
+.view {
+  text-decoration: none;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  font-family: "Space Mono", monospace;
+  line-height: 350%;
+  list-style-type: none;
+}
+.icon {
+  position: relative;
+  right: 5%;
+}
+.home1 {
+  position: relative;
+  margin-top: 50%;
+}
+.total {
+  display: flex;
+}
+.tot {
+  padding: 1rem 0;
+  height: 100px;
+  font-family: "Space Mono", monospace;
+  width: 25%;
+  text-align: center;
+  border: solid;
+  position: relative;
+  margin: 24px 0px 24px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--Button-gradient, #1e78f0);
+
+  /* Drop shadow/large */
+  box-shadow: 0px 8px 8px -4px rgba(197, 197, 197, 0.03),
+    0px 20px 24px -4px rgba(197, 197, 197, 0.08);
+}
+.h3 {
+  font-family: Space Mono;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-family: "Space Mono", monospace;
+}
+#light {
+  font-family: "Space Mono", monospace;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 20%;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; /* Align the image vertically in the middle of the cell */
+}
+
+/* login styles */
+
+.health {
+  flex: 1;
+}
+.logoimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.signin__image {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+}
+.from__login {
+  flex: 1;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form__signin,
+.logo__signin {
+  width: 100%;
+}
+.logo__signin p {
+  margin-bottom: 1rem;
+}
+.welcome__signin {
+  font-size: 30px;
+  font-weight: 600;
+}
+.maindiv {
+  display: flex;
+  height: 100vh;
+  gap: 1rem;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #fd6e0a;
+}
+.signin__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.button1 {
+  color: white;
+  border-radius: 6px;
+  background: var(
+    --Button-gradient,
+    linear-gradient(100deg, #1e78f0 1.81%, #9716ca 100%)
+  );
+  box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+  font-size: 18px;
+  text-align: center;
+  width: 50%;
+  padding: 0.7rem 0;
+  text-align: center;
+}
+.signup__opt {
+  color: #1e78f0;
+  text-decoration: underline;
+}
+
+/* patient medical record */
+.search__dash {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+.search__dash input {
+  background: transparent;
+  outline: none !important;
+  border: 0;
+  padding: 0;
+}
+.search__dash input:focus {
+  border: 0;
+}
+.parentdiv {
+  display: flex;
+  height: 100vh;
+}
+
+.arrowholder {
+  padding-top: 40px;
+}
+
+.side-bar {
+  margin: 0;
+  background: var(--foundation-primary-color-dark-active, #0d366c);
+  flex: 0 0 22%;
+  height: 100vh;
+  padding: 20px;
+}
+.secondcolumn {
+  overflow-y: scroll;
+  padding-left: 30px;
+  padding-bottom: 100px;
+  background: var(--foundation-primary-color-darker, #0b2a54);
+  color: white;
+  padding-right: 70px;
+  flex: 1;
+}
+
+.minimenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+  height: 100px;
+}
+
+.lastrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.drb {
+  padding-left: 20px;
+}
+
+form.example {
+  display: flex;
+}
+
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid white;
+  /* float: left; */
+  width: 80%;
+  background: transparent;
+  border-right: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  font-size: 17px;
+  border: 1px solid white;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.viewbuttons {
+  width: 180px;
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: white;
+  font-family: "Space Mono", monospace;
+}
+
+.viewbuttonss {
+  width: 180px;
+  border: none;
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-family: "Space Mono", monospace;
+  background: linear-gradient(100.39deg, #1e78f0 1.81%, #9716ca 100%);
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.search-bar {
+  display: flex;
+  align-content: space-between;
+  gap: 20px;
+}
+
+#light {
+  text-align: center;
+}
+.active-link {
+  border-radius: 0px 40px 40px 0px;
+  background: #7912a2;
+  color: #fffde9;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: "Space Mono", monospace;
+}
+.view__menu {
+  padding-top: 80px;
+  padding-left: 20px;
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  font-family: "Space Mono", monospace;
+  list-style-type: none;
+}
+
+.view__menu li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.view__menu li img {
+  margin-right: 20px;
+}
+
+.home {
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  font-family: "Space Mono", monospace;
+  list-style-type: none;
+}
+
+
+.editt {
+  display: flex;
+  align-items: center;
+}
+
+.homeicon {
+  width: 30px;
+  height: 30px;
+  border: 4px;
+  padding-top: 15px;
+}
+
+.drview {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+}
+
+.vieww {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: "Space Mono", monospace;
+}
+.h3 {
+  font-family: Space Mono;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-family: "Space Mono", monospace;
+}
+
+.homeicon {
+  padding-top: 15px;
+  width: 30px;
+  height: 30px;
+  border: 4px;
+}
+
+.personal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editbutton {
+  padding-right: 10px;
+}
+
+table {
+  font-family: "Space Mono", monospace;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+td.borderr {
+  border: 1px solid white !important;
+}
+
+.emergency {
+  font-family: "Space Mono", monospace;
+}
+
+.emergencyy {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.immunization {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+}
+
+.retext {
+  border-radius: 8px;
+  border: 1px solid #b5b5b5;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.tab1 {
+  border-collapse: collapse;
+  width: 62%;
+}
+
+.transfer {
+  width: 492px;
+  height: 45px;
+  top: 2332px;
+  left: 660px;
+  padding: 12px, 444px, 12px, 444px;
+  border-radius: 4px;
+  gap: 10px;
+  background: linear-gradient(100.39deg, #1e78f0 1.81%, #9716ca 100%);
+  color: white;
+  font-family: "Space Mono", monospace;
+}
+
+.update {
+  padding-left: 40px;
+  width: 491px;
+  height: 42px;
+  top: 938px;
+  left: 14967px;
+  padding: 12px, 20px, 12px, 20px;
+  border-radius: 4px;
+  border: 1px solid white;
+  gap: 10px;
+  color: white;
+  background: transparent;
+  font-family: "Space Mono", monospace;
+}
+
+.transfercon {
+  padding-top: 50px;
+  padding-left: 150px;
+}
+
+.updatecon {
+  padding-top: 30px;
+  padding-left: 150px;
 }

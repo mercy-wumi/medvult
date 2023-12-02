@@ -38,6 +38,9 @@ const Homepage = () => {
                 <li className="menu" id="menuitem4">
                   Contact Us
                 </li>
+                <li className="menu" id="menuitem4">
+                  <Link to="signup-doctor">Register as Doctor</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -46,7 +49,9 @@ const Homepage = () => {
             <Link to="signup-patient">
               <button className="firstbutton">Register</button>
             </Link>
-            <button className="secondbutton">Sign in</button>
+            <Link to="signin-patient">
+              <button className="secondbutton">Sign in</button>
+            </Link>
           </div>
         </nav>
       </section>
