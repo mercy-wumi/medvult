@@ -2,47 +2,15 @@ import q1 from "../assets/images/q1.png";
 import q2 from "../assets/images/q2.png";
 import q3 from "../assets/images/q3.png";
 import q4 from "../assets/images/q4.png";
-import settings from "../assets/images/settings.png";
 import add_alert from "../assets/images/add_alert.png";
 import lightlogo from "../assets/images/heart.png";
-import grid_view from "../assets/images/grid_view.png";
-import date_range from "../assets/images/date_range.png";
-import medlogo from "../assets/images/medlogo.png";
-
-import mypatientbut from "../assets/images/mypatientbut.png";
-import registerbut from "../assets/images/registerbut.png";
 import searchh from "../assets/images/searchh.png";
+import Sidebar from "../components/Sidebar";
 
 const DoctorDashOverview = () => {
   return (
     <div className="parentdiv">
-      <div className="side-bar">
-        <a href="/">
-          <img src={medlogo} alt="Medvult Logo" />
-        </a>
-        <ul className="view__menu">
-          <li className="active-link">
-            <img src={grid_view} />
-            Dashboard
-          </li>
-          <li>
-            <img src={date_range} className="icon" />
-            My Appointments
-          </li>
-          <li>
-            <img src={mypatientbut} alt="patient" />
-            My Patients
-          </li>
-          <li>
-            <img src={registerbut} className="icon" />
-            Register Patient
-          </li>
-          <li>
-            <img src={settings} className="icon" />
-            Setting
-          </li>
-        </ul>
-      </div>
+      <Sidebar />
       <div className="secondcolumn">
         <div className="minimenu">
           <h1>Overview</h1>
@@ -75,7 +43,7 @@ const DoctorDashOverview = () => {
           <h3 style={{ fontWeight: 700, fontSize: "18px" }}>Hi Doctor Ben, </h3>
           <span>Welcome back!</span>
 
-          <div className="total">
+          <div className="total-dash">
             <div className="tot">
               <img src="" />
               Total Patients

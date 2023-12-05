@@ -11,12 +11,15 @@ import interoperability from "../assets/images/interoperability.png";
 import empowerment from "../assets/images/empowerment.png";
 import dataMedVult from "../assets/images/data.png";
 import compliance from "../assets/images/compliance.png";
-import medichistory from "../assets/images/empowerment.png";
 import viewmore from "../assets/images/viewmore.png";
+import medichistory from "../assets/images/empowerment.png";
+import iphone from "../assets/images/iphone.png";
+import macbook from "../assets/images/macbook.png";
+import demoo from "../assets/images/demoo.png";
 
 const Homepage = () => {
   return (
-    <div className="holder">
+    <div className="first">
       <section className="firstsection">
         <nav className="first_menu">
           <h1 id="logo">
@@ -135,6 +138,175 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+
+      <div className="Mainpage">
+        <div>
+          <p className="why">Why Choose Us</p>
+        </div>
+        <div className="general">
+          <div className="lpmain">
+            <div className="lappac">
+              <img src={macbook} className="macbook" />
+            </div>
+            <div className="iPhonepac">
+              <img src={iphone} className="mainiphone" />
+            </div>
+          </div>
+
+          <div className="vertmain">
+            <p className="num">01</p>
+            <div className="vertical-line"></div>
+            <p className="num">02</p>
+            <div className="vertical-line"></div>
+            <p className="num">03</p>
+            {/* <div className="vertical-line"></div> */}
+          </div>
+
+          <div className="aboutmed">
+            <h4>
+              <b>2000+ Registered Hospitals and patients</b>
+              <p>
+                We have have successfully <br />
+                onboarded more than 2000
+                <br /> hospitals/ patients for our <br />
+                services.{" "}
+              </p>
+            </h4>
+
+            <h4>
+              <b>
+                Easy and quick response to update <br />
+                patients record
+              </b>
+              <p>
+                Doctors get to update patient record so it <br />
+                can be viewed in real time
+              </p>
+            </h4>
+
+            <h4>Health record security</h4>
+            <h4>
+              Blockchain encryption ensures the highest
+              <br />
+              level of data security, protecting patients <br />
+              from unauthorized access.
+            </h4>
+          </div>
+        </div>
+
+        <div className="started">
+          <button className="getstarted">Get started</button>
+        </div>
+
+        <div className="recbox">
+          <div className="min"></div>
+          <h1>
+            See How Medvult is making Doctors <br />
+            and Patients life easier
+          </h1>
+
+          <div className="watch">
+            <button className="circlebutton">
+              <img src={demoo} className="vidicon" />
+            </button>
+            <h4>Watch Video</h4>
+          </div>
+        </div>
+        <div className="subandbut">
+          <h3 className="Subscribe">Subscribe to our Newsletter</h3>
+          <input
+            type="text"
+            placeholder="Enter your Email Address"
+            className="sub__input"
+          />
+          <button className="form-btn">Subscribe</button>
+        </div>
+
+        <div className="lastdiv">
+          <img src={medlogo} className="logo" />
+          <div>
+            <ul>
+              <p>Product</p>
+              <li>
+                <a href="#">Medication</a>
+              </li>
+              <li>
+                <a href="#">Appointment</a>
+              </li>
+              <li>
+                <a href="#">Nutrition</a>
+              </li>
+              <li>
+                <a href="#">Nutrition</a>
+              </li>
+              <li>
+                <a href="#">Custom Webhooks</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <p>Services</p>
+              <li>
+                <a href="#">Create record</a>
+              </li>
+              <li>
+                <a href="#">View health record</a>
+              </li>
+              <li>
+                <a href="#">Update health record</a>
+              </li>
+              <li>
+                <a href="#">Book appointment</a>
+              </li>
+              <li>
+                <a href="#">DAta security</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <p>About Us</p>
+              <li>
+                <a href="#">Medvult medics</a>
+              </li>
+              <li>
+                <a href="#">contact address</a>
+              </li>
+              <li>
+                <a href="#">Clinics</a>
+              </li>
+              <li>
+                <a href="#">Subscribers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <p>Contact</p>
+              <li>
+                <a href="#">+23487690345678</a>
+              </li>
+              <li>
+                <a href="#">Info@medvult,com</a>
+              </li>
+              <li>
+                <a href="#">54 jones close porthacourt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer">
+          <p>
+            Developed with love by{" "}
+            <a href="#" className="code">
+              Medvulsgroup
+            </a>{" "}
+            © 2023
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
