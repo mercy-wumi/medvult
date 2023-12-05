@@ -3,11 +3,9 @@ import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="parentdiv">
       <Sidebar />
-      <div>
-        <Outlet />
-      </div>
+      <Outlet />
     </div>
   );
 };

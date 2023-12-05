@@ -8,6 +8,7 @@ import PatientSignIn from "./pages/PatientSignIn";
 import PatientMedicalRecord from "./pages/PatientMedicalRecord";
 import DoctorSignIn from "./pages/DoctorSignIn";
 import MyPatient from "./pages/MyPatient";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -18,9 +19,11 @@ function App() {
         <Route path="signin-patient" element={<PatientSignIn />} />
         <Route path="signup-doctor" element={<DoctorSignUp />} />
         <Route path="signin-doctor" element={<DoctorSignIn />} />
-        <Route path="dashboard" element={<DoctorDashOverview />} />
-        <Route path="patient-record" element={<PatientMedicalRecord />} />
-        <Route path="my-patient" element={<MyPatient />} />
+        <Route exact path="dashboard/" element={<Dashboard />}>
+          <Route index="true" element={<DoctorDashOverview />} />
+          <Route path="patient-record" element={<PatientMedicalRecord />} />
+          <Route path="my-patient" element={<MyPatient />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

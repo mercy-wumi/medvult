@@ -9,8 +9,6 @@ import Sidebar from "../components/Sidebar";
 
 const DoctorDashOverview = () => {
   return (
-    <div className="parentdiv">
-      <Sidebar />
       <div className="secondcolumn">
         <div className="minimenu">
           <h1>Overview</h1>
@@ -117,7 +115,6 @@ const DoctorDashOverview = () => {
           </tbody>
         </table>
       </div>
-    </div>
   );
 };
 

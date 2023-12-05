@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { deployedAddress } from "../deployedAddress";
 import { useContractWrite } from "wagmi";
 import healthABI from "../healthABI.json";
+import { MedVultContext } from "../context/MedVultContext";
 
 import logo_trans from "../assets/images/logo_trans.svg";
 import signinpatient from "../assets/images/signin-patient.png";
 
 const PatientSignIn = () => {
+  const { patients, setPatients } = useContext(MedVultContext);
   const navigate = useNavigate();
   const [patientSignInRec, setPatientSignInRec] = useState({
     name: "",
@@ -36,10 +38,16 @@ const PatientSignIn = () => {
 
   useEffect(() => {
     if (data) {
+      setPatients({
+        ...patients,
+        data,
+      });
       alert("Patient logged In succesfully");
       navigate("/dashboard");
     }
   }, [data]);
+
+  console.log(patients);
 
   return (
     <div className="maindiv">

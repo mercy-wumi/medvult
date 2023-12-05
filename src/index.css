@@ -84,10 +84,14 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
 }
 
 .medcopy {
+  width: 90%;
   font-size: 40px;
+  line-height: 1.5;
+  font-weight: 600;
   color: white;
   font-family: "Orbitron", sans-serif;
   margin-top: 100px;
@@ -124,14 +128,6 @@ h1 {
   background: transparent;
   border: none;
   font-family: "Space Mono", monospace;
-}
-
-.imageholder {
-  width: 80%;
-}
-
-.imageholder img {
-  width: 500px;
 }
 
 .aboutsection {
@@ -724,7 +720,7 @@ input[type="text"] {
 .side-bar {
   margin: 0;
   background: var(--foundation-primary-color-dark-active, #0d366c);
-  flex: 0 0 22%;
+  width: 22%;
   height: 100vh;
   padding: 20px;
 }
