@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { deployedAddress } from "../deployedAddress";
-import { useContractWrite } from "wagmi";
+import { useContractRead } from "wagmi";
 import healthABI from "../healthABI.json";
 import { MedVultContext } from "../context/MedVultContext";
 
@@ -24,7 +24,7 @@ const PatientSignIn = () => {
     });
   };
   // login doctor here
-  const { data, isLoading, isSuccess, write } = useContractWrite({
+  const { data, isLoading, isSuccess } = useContractRead({
     address: deployedAddress,
     abi: healthABI,
     functionName: "getPatientDetails",
@@ -38,22 +38,18 @@ const PatientSignIn = () => {
 
   useEffect(() => {
     if (data) {
-      setPatients({
-        ...patients,
-        data,
-      });
       alert("Patient logged In succesfully");
       navigate("/dashboard");
     }
   }, [data]);
 
-  console.log(patients);
-
   return (
     <div className="maindiv">
       <div className="from__login">
         <div className="logo__signin">
-          <img src={logo_trans} className="logoimage" />
+          <a href="/">
+            <img src={logo_trans} className="logoimage" />
+          </a>
           <p className="welcome__signin">Welcome Patient!</p>
           <p>Please enter the required information</p>
         </div>
@@ -76,7 +72,7 @@ const PatientSignIn = () => {
           />
           <div className="signin__btn">
             <button onClick={handleSignInSubmit} className="button1">
-              Sign in
+              {isLoading ? "Loading..." : "Signin"}
             </button>
           </div>
         </form>

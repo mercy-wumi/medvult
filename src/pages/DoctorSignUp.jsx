@@ -36,7 +36,7 @@ const DoctorSignUp = () => {
   };
 
   // adding basic doctor info here
-  const { data, isLoading, isSuccess, write } = useContractWrite({
+  const { data, write } = useContractWrite({
     address: deployedAddress,
     abi: healthABI,
     functionName: "addDoctors",

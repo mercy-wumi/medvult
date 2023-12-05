@@ -1,13 +1,21 @@
-import Sidebar from "../components/Sidebar";
-
 import q1 from "../assets/images/q1.png";
 import add_alert from "../assets/images/add_alert.png";
 import lightlogo from "../assets/images/heart.png";
 import searchh from "../assets/images/searchh.png";
 import delphine from "../assets/images/delphine.png";
+import { deployedAddress } from "../deployedAddress";
+import healthABI from "../healthABI.json";
+
+import { useContractRead } from "wagmi";
 import { Link } from "react-router-dom";
 
 const MyPatient = () => {
+  const { data, isError, isLoading } = useContractRead({
+    address: deployedAddress,
+    abi: healthABI,
+    functionName: "allPatients",
+  });
+
   return (
     <div className="secondcolumn">
       <div className="minimenu">
@@ -41,16 +49,20 @@ const MyPatient = () => {
           <button className="vieww">View All</button>
         </div>
         <div className="total">
-          {[...Array(12)].map((pat) => (
-            <div className="pat-tot">
-              <img src={delphine} alt="patient profile" />
-              <p>Delphine Jones</p>
-              <p>Female</p>
-              <button className="viewbuttons">
-                <Link to="/dashboard/patient-record">View Record</Link>
-              </button>
-            </div>
-          ))}
+          {isLoading ? (
+            <div>Loading...</div>
+          ) : (
+            data.map((pat) => (
+              <div className="pat-tot">
+                <img src={delphine} alt="patient profile" />
+                <p>{pat.firstName + " " + pat.lastName}</p>
+                <p>{pat.gender === 0 ? "Male" : "Female"}</p>
+                <button className="viewbuttons">
+                  <Link to="/dashboard/patient-record">View Record</Link>
+                </button>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>

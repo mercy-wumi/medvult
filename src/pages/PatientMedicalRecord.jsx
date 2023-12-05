@@ -1,13 +1,7 @@
-import grid_view from "../assets/images/grid_view.png";
-import date_range from "../assets/images/date_range.png";
-import mypatientbut from "../assets/images/mypatientbut.png";
-import registerbut from "../assets/images/registerbut.png";
-import settings from "../assets/images/settings.png";
 import q1 from "../assets/images/q1.png";
 import add_alert from "../assets/images/add_alert.png";
 import editbut from "../assets/images/editbut.png";
 import heart from "../assets/images/heart.png";
-import medlogo from "../assets/images/medlogo.png";
 import searchh from "../assets/images/searchh.png";
 
 const PatientMedicalRecord = () => {

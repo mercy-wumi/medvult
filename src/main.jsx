@@ -8,6 +8,7 @@ import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { goerli, sepolia } from "wagmi/chains";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
+import MedVultContextProvider from "./context/MedVultContext.jsx";
 
 const { chains, publicClient } = configureChains(
   [sepolia, goerli],
@@ -32,10 +33,12 @@ const wagmiConfig = createConfig({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
-        <App />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <MedVultContextProvider>
+      <WagmiConfig config={wagmiConfig}>
+        <RainbowKitProvider chains={chains}>
+          <App />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </MedVultContextProvider>
   </React.StrictMode>
 );

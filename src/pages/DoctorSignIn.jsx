@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { deployedAddress } from "../deployedAddress";
-import { useContractWrite } from "wagmi";
+import { useContractRead } from "wagmi";
 import healthABI from "../healthABI.json";
 
 import logo_trans from "../assets/images/logo_trans.svg";
@@ -23,7 +23,7 @@ const DoctorSignIn = () => {
   };
 
   // login doctor here
-  const { data, isLoading, isSuccess, write } = useContractWrite({
+  const { data } = useContractRead({
     address: deployedAddress,
     abi: healthABI,
     functionName: "getDoctorDetails",
@@ -31,22 +31,19 @@ const DoctorSignIn = () => {
   });
   const handleSignInSubmit = (e) => {
     e.preventDefault();
-
-    write?.();
-  };
-
-  useEffect(() => {
     if (data) {
       alert("Doctor logged In succesfully");
       navigate("/dashboard");
     }
-  }, [data]);
+  };
 
   return (
     <div className="maindiv">
       <div className="from__login">
         <div className="logo__signin">
-          <img src={logo_trans} className="logoimage" />
+          <a href="/">
+            <img src={logo_trans} className="logoimage" />
+          </a>
           <p className="welcome__signin">Welcome Doctor!</p>
           <p>Please enter the required information</p>
         </div>

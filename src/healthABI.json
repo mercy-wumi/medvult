@@ -116,6 +116,126 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "allDoctor",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "firstName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lastName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dob",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "specialization",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "licenseNumber",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "hospital",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Details.Doctor[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "allPatients",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "firstName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lastName",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mobNum",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "dob",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "age",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "internalType": "enum Details.Gender",
+            "name": "gender",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "password",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "confirmPassword",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Details.Patient[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
@@ -168,7 +288,7 @@
             "type": "string"
           }
         ],
-        "internalType": "struct Details.Doctors",
+        "internalType": "struct Details.Doctor",
         "name": "",
         "type": "tuple"
       }
@@ -239,8 +359,8 @@
             "type": "uint256"
           }
         ],
-        "internalType": "struct Details.Patients",
-        "name": "",
+        "internalType": "struct Details.Patient",
+        "name": "onePatient_",
         "type": "tuple"
       }
     ],
