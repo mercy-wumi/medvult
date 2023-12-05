@@ -6,14 +6,23 @@ import delphine from "../assets/images/delphine.png";
 import { deployedAddress } from "../deployedAddress";
 import healthABI from "../healthABI.json";
 
-import { useContractRead } from "wagmi";
+import { useContractRead, useAccount } from "wagmi";
 import { Link } from "react-router-dom";
 
 const MyPatient = () => {
+  const { address } = useAccount();
+
   const { data, isError, isLoading } = useContractRead({
     address: deployedAddress,
     abi: healthABI,
     functionName: "allPatients",
+  });
+
+  const { data: getDoc } = useContractRead({
+    address: deployedAddress,
+    abi: healthABI,
+    functionName: "getDoctorDetails",
+    args: [address],
   });
 
   return (
@@ -32,9 +41,9 @@ const MyPatient = () => {
           <img src={q1} className="img2" />
           <h4 className="drb">
             {" "}
-            Dr. Ben
+            {getDoc?.firstName + " " + getDoc?.lastName}
             <br />
-            dentist
+            {getDoc?.specialization}
           </h4>
         </div>
       </div>
@@ -45,7 +54,7 @@ const MyPatient = () => {
       </div>
       <div>
         <div className="drview">
-          <h3>Hi Doctor Ben</h3>
+          <h3>Hi Doctor {getDoc?.firstName}</h3>
           <button className="vieww">View All</button>
         </div>
         <div className="total">

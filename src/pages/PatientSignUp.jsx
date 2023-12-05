@@ -55,7 +55,7 @@ const PatientSignUp = () => {
   useEffect(() => {
     if (data) {
       alert("Patient created succesfully");
-      navigate("/signin-patient");
+      navigate("/my-patient");
     }
   }, [data]);
 

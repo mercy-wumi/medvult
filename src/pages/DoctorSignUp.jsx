@@ -158,16 +158,23 @@ const DoctorSignUp = () => {
         </div>
         <div>
           <p className="text-center text-xs font-normal mt-4">
-            Already have an account?<Link to="/signin-doctor"> Click Me</Link>
+            Already have an account?
+            <Link
+              to="/signin-doctor"
+              className="text-purple-background-body underline"
+            >
+              {" "}
+              Click Me
+            </Link>
           </p>
         </div>
         <button
           onClick={handleSignUpSubmit}
           className={`${
             address
-              ? "bg-purple-background-body"
-              : "bg-[#b0b0b0] pointer-events-none"
-          } px-12 py-2 mt-8 text-[#ffffff] rounded-lg flex justify-center items-center w-full`}
+              ? "bg-purple-background-body text-[#ffffff] "
+              : "bg-[#fbfbfb] pointer-events-none text-[#000]"
+          } px-12 py-2 mt-8 rounded-lg flex justify-center items-center w-full`}
         >
           Sign Up
         </button>

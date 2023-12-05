@@ -20,7 +20,7 @@ const DoctorDashOverview = () => {
     address: deployedAddress,
     abi: healthABI,
     functionName: "getDoctorDetails",
-    args: [address]
+    args: [address],
   });
 
   return (
@@ -40,7 +40,7 @@ const DoctorDashOverview = () => {
             {" "}
             {data?.firstName + " " + data?.lastName}
             <br />
-            {data?.speciality}
+            {data?.specialization}
           </h4>
         </div>
       </div>
@@ -53,7 +53,9 @@ const DoctorDashOverview = () => {
         <h1>Zion A. Memorial Hospital</h1>
       </div>
       <div>
-        <h3 style={{ fontWeight: 700, fontSize: "18px" }}>Hi Doctor Ben, </h3>
+        <h3 style={{ fontWeight: 700, fontSize: "18px" }}>
+          Hi Doctor {data?.firstName},{" "}
+        </h3>
         <span>Welcome back!</span>
 
         <div className="total-dash">

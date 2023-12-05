@@ -48,14 +48,14 @@ const DoctorSignIn = () => {
           <p>Please enter the required information</p>
         </div>
         <form className="form__signin">
-          <h3>Full name</h3>
+          {/* <h3>Full name</h3>
           <input
             name="name"
             value={doctorSignInRec.name}
             onChange={handleDoctorSIgnIn}
             type="text"
             placeholder="Enter name"
-          />
+          /> */}
           <h3>Wallet Address</h3>
           <input
             name="address"

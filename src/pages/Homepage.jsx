@@ -42,7 +42,7 @@ const Homepage = () => {
                   Contact Us
                 </li>
                 <li className="menu" id="menuitem4">
-                  <Link to="signup-doctor">Register as Doctor</Link>
+                  <Link to="signup-doctor">Register/Login as Doctor</Link>
                 </li>
               </ul>
             </div>
@@ -71,7 +71,9 @@ const Homepage = () => {
             </h5>
 
             <div className="try">
-              <a href="/signup-patient"><img src={tryMedVult} /></a>
+              <a href="/signup-patient">
+                <img src={tryMedVult} />
+              </a>
             </div>
           </div>
           <div className="imageholder">
@@ -195,7 +197,9 @@ const Homepage = () => {
         </div>
 
         <div className="started">
-          <button className="getstarted"><a href="/signup-doctor">Get started</a></button>
+          <button className="getstarted">
+            <a href="/signup-doctor">Get started</a>
+          </button>
         </div>
 
         <div className="recbox">
